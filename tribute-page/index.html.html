@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Tangerine">
+      <link rel="preconnet" href="https://fonts.googleapis.com">
+      <link rel="preconnet" href="https://fonts.gstatic.com" crossorigin>
+      <link href"https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&
+            family=Roboto:wght@400;700&display=swap" 
+            rel="stylesheet">
+      <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+      <meta name="viewport" content="with=device-width, initial-scale=1">
+      <title>Mi primera página</title>
+  
+  <style>
+        html, body{
+                display:flex;
+                flex-direction:column;
+                margin: 0;
+                background: #f6f6f6;
+                font-family: 'Roboto', sans-serif;
+        }
+        #header{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                background: #284b58;
+                color: #f7ede2;
+        }
+        #navigation{
+                background: #dda15e;
+        }
+        #navigation li{
+                display: inline-block;
+        }
+        #navigation ul{
+                margin: 0;
+                padding: 0;
+                border:1px solid #e7e7e7;
+                background-color: #f3f3f3;
+        }
+        #navigation li{
+                display: inline-block;
+        }
+        #navigation li a{
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                color: #365764;
+                padding: 20px;
+                font-weight: 600;
+        }
+        #navigation li a:hover{
+                backgroound: #c58845;
+        }
+        #navigation li a:hover:not(.active){
+                background-color: #ddd;
+        }
+        #navigation li a.active{
+                color: #fff,
+                background-color: #665;
+        }
+        .seccion-navegador{
+                margin: 0 20px;
+        }
+        #main-content-container{
+                display: flex;
+                flex-direction: row;
+                height: 100%;
+        }
+        #main-content{
+                display: flex;
+                flex-direction: column;
+                flex: 6;
+                padding-bottom: 40px;
+                max-width: 60ren;
+                margin: auto;
+        }
+        #main-content > ing {
+                width: 100%;
+        }
+        .main-content_text{
+                padding: 15px, 20px; 0;
+        }
+        #links-sidebar{
+                background: #ecebeb;
+                flex: 2;
+                max-width: 16ren;
+                flex-direction: column;
+                display: flex;
+                aling-items: center;
+        }
+        .links{
+                text-decoration: none;
+                color: #902539;
+                margin: 10px 0;
+        }
+        #links-sidebar ul{
+                padding: 0 0 0 10px;
+        }
+        #links-sidebar li{
+                list-style: none;
+        }
+        .article-content{
+                display: flex;
+                flex-direction: row;
+                margin: 30px 0 0;
+                flex-wrap: wrap;
+                justify-content: space-between;
+        }
+        .article{
+                margin: 10px 0;
+                width: 45%;
+        }
+        .article > .article__image {
+                max-width: 100%;
+        }
+        .article > .article__background { 
+                 height: 180px;
+                 background-position: center;
+                 background-size: cover;
+        }
+        .article > .article__title {
+                 color: #264653;
+        }
+        article > .article__link {
+                 text-decoration: none;
+        }
+        .footer__main_content{
+                 margin-top: auto;
+                 text-aling: center;
+                 padding: 20px 0;
+                 display: flex;
+                 flex-direction: row;
+                 background: #264653;
+                 color: #f7ede2;
+        }
+        .footer__main_content > .footer__section{
+                 flex: 1;
+                 display: flex;
+                 align-items: center;
+                 flex-direction: column;
+        }
+        .footer__main_content > .form-group{
+                 display: flex;
+                 flex-direction: row;
+        }
+        .social-media__section{
+                 font-size: 25px;
+        }
+        .social-media__section > a{
+                 text-decoration: none;
+                 color: #f7ede2;
+        }
+        input[tyle=email]{
+                 background: #f7ede2;
+                 padding: 10px 20px;
+                 border: none;
+                 color: #264653;
+                 font-size: 18px;
+                 width: 100%;
+        }
+        input[type=email]:focus, textarea:focus{
+                 border: 3px solid #dda15e;
+        }
+        input[type=email], textarea{
+                 width: 100%;
+                 padding: 12px 20px;
+                 margin: 8px 0;
+                 box-sizing: border-box;
+                 border: 3px solid #ccc;
+                 transition: 0.5s;
+                 outline: npne;
+        }
+        #navigation .menu-icon-list{
+                 display: none;
+        }
+        @media screen and (max-width: 600px){
+                 #navigation li:not(:first-child):not(.menu-icon-list){
+                             display: none;
+                 }
+                 #navigation .menu-icon-list{
+                             display: block;
+                             float: right;
+                 }
+                 #navigation.responsive{
+                             position: relative;  
+                 }
+                 #navigation.responsive .menu-icon-list{
+                             position: absolute;
+                             right: 0;
+                             top: 0;
+                 }
+                 #navigation.responsive .menu-icon-list a{
+                             color: #fff;
+                 }
+                 #navigation.responsive li{
+                             float: none;
+                             display: block!important;
+                 }
+                 #navigation.responsive li a{
+                             text-align: left;
+                 }
+       }
+       @media screen and (max-width: 600px){
+                 #links-sidebar {
+                              display: none;
+                 }
+       }
+       
+       @media screen and (max-width: 600px){
+                 #main-content-container {
+                              padding-right: 10px;
+                              padding-left: 10px;
+                 }
+       }
+
+  </style>
+ </head>
+ <scrip>
+        function myFunction(){}
+        console.log('entrar');
+           const navigation = document.getElementById("nav-bar");
+        if (navigationBar.classNane === "nav-bar") {
+           navigationBar.classNane += "responsive";
+        } else {
+           navigationBar.classNane = "nav-bar";
+        }
+     }
+ </script>
+ 
+     <body>
+
+       <header id="header">
+        <center>
+          <h1> Jacobo Grinberg </h1>
+          <p> 1946 - 1994 </p>
+        </center>
+       </header>
+    
+
+   <nav id="navigation" class="navigation-bar">
+    <ul>
+        <li>
+            <a class="active" href="https://es.wikipedia.org/wiki/Jacobo_Grinberg"> Acerca </a>
+        </li>
+        <li> 
+            <a href=""> Chamanes </a>
+        </li>
+        <li> 
+            <a href=""> Teoria Sintérgica </a>
+        </li>
+        <li>
+            <a href=""> Meditación </a>
+        </li>
+        <li>
+            <a href=""> Desaparición </a>
+        </li>
+        <li class="menu-icon-list"> 
+            <a href="javascript:void(0);" onclick="showHamburgerMenu()">
+              <i class="lni lni-menu"></i> 
+            </a>
+        </li>
+    </u>
+
+  </nav>
+
+     
+      <div id="main-content-container">
+      <aside id="links-sidebar">
+           <p> Links </p>  
+                <a class="link" href=""> Estudios </a>
+                <a class="link" href=""> Investigaciones </a>
+                <a class="link" href=""> Datos Interesantes </a>
+
+       </aside>   
+       <section id="main-content">
+             <center>
+           <img src="https://www.ovnihoje.com/wp-content/uploads/2021/05/grinberg.jpg" width="700px">
+            </center>
+           <div class=""main-content__text">
+           
+            <p>
+            <h4> ¿Quién fue Jacobo Grinberg </h4>
+
+              Jacobo Grinberg-Zylberbaum (Ciudad de México, 12 de diciembre de 1946 - desaparecido en 1994), conocido como Jacobo Grinberg, fue un neurofisiólogo
+ y psicólogo mexicano. Se dedicó a estudiar el chamanismo mexicano, la conciencia, disciplinas orientales, meditación y telepatía. Escribió 54 libros acerca de 
+estos temas.​ Desapareció el 8 de diciembre de 1994, en circunstancias desconocidas.
+          </p>
+
+             <p>
+             Jacobo Grinberg se tomó el atrevimiento de utilizar el método científico en estudios sobre chamanismo, al intentar combinar ambos en su trabajo 
+profesional con el objetivo de entender el "mundo mágico".1​ Intentó realizar un cambio en la manera en la que se entiende la relación entre la ciencia y 
+la conciencia. Esto repercutió en el mundo científico llegando a ser criticado por la parte conservadora de la ciencia, lo cual fue perfecto, necesario e inevitable.
+Su trabajo pretende exhibir las bases científicas para la telepatía y otras disciplinas esotéricas.
+
+         </p>
+       </div>
+       <div class="articles-content">
+          <article class="article">
+          <img src="https://caminosconsciencia.es/wp-content/uploads/2018/05/Jacobo-Grinberg-4-1.jpg" width="350px">
+       </div>
+
+       <h2 class="article__title">Vision Extraocular</h2>
+       <p class="article__text">El gran experiemnto que cambiaria el mundo</p><br>
+       <a class="link" href=""> MAS INFORMACION </a>
+          </article>
+          
+       <article class="article">
+         <img src="https://i.pinimg.com/originals/c2/79/42/c27942369e1adf50b5c43ba494305cf3.png" width="350">
+       </div>
+        <center>
+       <h2 class="article__title">Neurociencia para Jacobo</h2>
+       <p class="article__text">Como funciona la mente para Jacobo</p><br> 
+       <a class="link" href="">MAS INFORMACION</a>
+        </center>
+          </article> 
+         
+       
+      </div>
+      </section>
+
+  </div>
+
+  <footer id="my-footer" class="footer__main_content">
+ 
+   <div class="footer__section">
+           <h5>Contact us</h5>
+
+     <form>
+         <div class="form-group">
+           <label="email">email:</label><br>
+           <input type="email" id="email" name="email"
+           placeholder="Write your email" ><br><br>
+       </div>
+       <div class="form-group">
+           <label for="comments">Comments: </label><br>
+           <textarea name="comments" rows"10" cols="30">
+           </textarea>
+       </div>
+       <input type="subnit" value="Subnit">
+     </form>
+   
+    </div>
+    
+    <div class="footer__section">
+        <h5>Follow us</h5>
+        <div class="social-media__section">
+           <a href="https://www.linkedin.com/" target="_blank"></i
+           class="lni lni-linkedin-original"></i></a>
+           <i class="lni lni-github-original"></i>
+    </div>
+
+    <div class="footer__section">
+        <h5>Follow us</h5>
+        <div class="social-media__section">
+           <a href="https://www.instagram.com/" target="_blank"></i
+           class="lni lni-instagram-original"></i></a>
+           <i class="lni lni-instagram-original"></i>
+    </div>
+    
+     <div class="footer__section">
+        <h5>Follow us</h5>
+        <div class="social-media__section">
+           <a href="https://www.facebook.com/" target="_blank"></i
+           class="lni lni-facebook-original"></i></a>
+           <i class="lni lni-facebook-original"></i>
+    </div>
+  
+
+  </div>
+ </footer>
+       
+ </body>
+
+</html>
